@@ -1,5 +1,6 @@
 let el = 0
-input.onGesture(Gesture.TiltRight, function () {
+input.onButtonPressed(Button.A, function () {
+    basic.showIcon(IconNames.Happy)
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -8,7 +9,8 @@ input.onGesture(Gesture.TiltRight, function () {
         . . . . .
         `)
 })
-input.onGesture(Gesture.Shake, function () {
+input.onButtonPressed(Button.B, function () {
+    basic.showIcon(IconNames.Happy)
     el = randint(1, 3)
     if (el == 1) {
         basic.showLeds(`
